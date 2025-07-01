@@ -1,0 +1,19 @@
+<h2>Types of Data Binding</h2>
+<h3>One Way-</h3>
+<h4>Interpolation (Comp to View)</h4>
+I live in {{ city }}
+<!--JS        ${} -->
+<!--React      {} -->
+<br /><br />
+<h4>Property Binding (Comp to View)</h4>
+<input [type]="inputType" />
+<button [disabled]="isLoginDisabled">Login</button>
+<br /><br />
+<h4>Event Binding (View to Comp)</h4>
+<button (click)="handleRegister()">Register</button>
+<button [disabled]="isLoginDisabled">Login</button>
+<br /><br /><br /><br />
+
+<h3>Two Way-(View to Comp) & (Comp to View)</h3>
+<input type="text" [(ngModel)]="user" #username="ngModel" />
+Hola {{ user.length ? user + "!!" : '' }}

@@ -3,6 +3,7 @@ import { Home } from './components/home/home';
 import { AboutUs } from './components/about-us/about-us';
 import { Products } from './components/products/products';
 import { PageNotFound } from './components/page-not-found/page-not-found';
+import { DataBinding } from './components/data-binding/data-binding';
 
 export const routes: Routes = [
   { path: '', component: Home },
@@ -10,6 +11,10 @@ export const routes: Routes = [
   {
     path: 'products',
     component: Products,
+  },
+  {
+    path: 'data-binding',
+    component: DataBinding,
   },
   { path: '**', component: PageNotFound },
 ];
