@@ -1,27 +1,4 @@
-<h3>Structural Directive</h3>
-{{gender == "female" ?"She" : "He"}} is a painter
-
-<br/><br/>  
-@if (gender == "female"){
-    She is a painter
-} @else{
-    You are not a painter
-}
-
-<br/><br/>
-@for (hobby of hobbies; track hobby){
-   <li>{{ $index }} I love {{ hobby }}</li>
-}
-
-<br/><br/>
-@switch (color) {
-        @case ("red") {
-            <div style="background-color: red;  color: aliceblue; height: 30px;">Red</div>
-        }
-        @case ("green") {
-            <div style="background-color: green; color: aliceblue; height: 30px;">green</div>
-        }
-        @default{
-            <div>No Colour chosen</div>
-        }
-    }
+<div [ngClass]="isDanger ? 'red' : 'blue'">New Delhi</div>
+<div [ngStyle]="{'background-color':isDanger ? 'green':'yellow' }">
+  Example of NgStyle
+</div>
