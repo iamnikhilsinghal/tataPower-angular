@@ -2,5 +2,29 @@
 <span>I am about us span</span>
 
 <p appHighlight>This para is using highlight directive</p>
-
 <p appHighlight>Highlight me!</p>
+
+array is - {{ arr | json }}
+<br />
+sliced array- {{ collection | slice: 1 : 3 }}
+
+<h3>Pipes</h3>
+<h5>titlecase pipe</h5>
+{{ company }}
+<br />
+{{ company | titlecase }}
+
+<h5>date pipe</h5>
+{{ purchasedOn }}
+<br />
+{{ purchasedOn | date }}
+<br />
+{{ purchasedOn | date : 'MM/dd/yyyy' }}
+<br />
+{{ purchasedOn | date : 'medium' }}
+<!-- {{ value_expression | date:format:timezone:locale }} -->
+
+<!-- 
+|| OR
+| pipe 
+-->
