@@ -9,6 +9,7 @@ import { DatePipe, JsonPipe, SlicePipe, TitleCasePipe } from '@angular/common';
   styleUrl: './about-us.scss',
 })
 export class AboutUs {
+  myColor = 'grey';
   amount = 123.45;
   company = 'acme corporation';
   // purchasedOn = '2024-07-08';
