@@ -1,2 +1,21 @@
 <p>users works!</p>
 message is: {{ msg }}
+<br />
+
+USE of ASYNC-
+<br />
+
+<!-- @if (delayedValue$ | async){ 
+    {{ delayedValue$ | async | json}} 
+} @else{ 
+    LOADING ......
+} -->
+
+<p *ngIf="delayedValue$ | async; else loading">
+  {{ delayedValue$ | async | json}}
+</p>
+
+<ng-template #loading>LOADING ......</ng-template>
+
+<br />
+array is- {{ arr | json}}

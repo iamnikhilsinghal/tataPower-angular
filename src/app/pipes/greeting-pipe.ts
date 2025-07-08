@@ -5,8 +5,6 @@ import { Pipe, PipeTransform } from '@angular/core';
 })
 export class GreetingPipe implements PipeTransform {
   transform(value: number, args: number): unknown {
-    console.log('value', value);
-
     return value + args;
     // return Number(value) + 5;
   }
