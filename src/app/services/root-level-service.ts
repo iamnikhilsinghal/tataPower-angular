@@ -22,6 +22,9 @@ export class RootService {
     return this.http.get('https://jsonplaceholder.typicode.com/todos');
   }
 
+  // timeout(3000) VS delay(3000)
+  // timeout will wait at max upto 3s if resp didnt come in this 3s, then it will give error
+  // delay will return the output after 3s
   // delay= setTimeout
   // of operator is converting this static string into observale
   // pipe is use to join obervable and delay

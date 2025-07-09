@@ -1,4 +1,4 @@
-<ul>
+<!-- <ul>
   <li>
     <a
       routerLink=""
@@ -22,4 +22,14 @@
 
 <div class="container-fluid">
   <router-outlet></router-outlet>
-</div>
+</div> -->
+
+<app-lifecycle [fname]="'Nikhil'"></app-lifecycle>
+
+<!-- ngOnChanges is called before ngOnInit because ngOnChanges 
+is responsible for assigning the initial vaiue to input -->
+
+<!-- ngOnChanges is called before ngOnInit during the component
+ initialization phase. After that, ngOnChanges is called 
+ every time an input property changes, while ngOnInit is
+  only called once. -->

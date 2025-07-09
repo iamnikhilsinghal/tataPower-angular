@@ -1,0 +1,742 @@
+PEAN
+Postgres - 4
+Express- 3
+Angular - 2
+Node - 3
+Javascript - 1
+
+Last 15 minutes- doubts
+Each Friday Start 15-20 Task
+
+18 June- 2 month- 18 August
+Sprint/Marathon- Consistency
+
+63 People
+Dev- 63
+Android- 25
+.Net- 25
+SAP- 3
+Java- 10
+
+Javascript- Vanilla JS 
+client(Angular)+server(node/express) side language
+lightweight
+DOM manipulation. HTML+CSS-  need of JS? AJAX
+
+SPA- Angular
+
+HTML- Page Design/Structure
+CSS- Beutification/Styling
+JS- Interactive
+typescript- superset of JS- maintain Strict type
+id- integer
+email- text
+angular works on typescript- strictly follow datatype
+
+https://jsbin.com/?js,console
+
+JS-
+ES5
+ES6 / Ecmascript 2015
+
+// ES5- var
+// ES6- let, const
+
+let a;             // declaration
+a=20;              // intialization or assignment
+console.log(a)
+a=30
+console.log(a)
+
+// var can be redclared & redefined
+// let can be redefined but cant be redclared
+
+// ES5- var
+// ES6- let, const
+
+const a=20;             
+console.log(a)
+a=30
+console.log(a)
+
+// var can be redclared & redefined
+// let can be redefined but cant be redclared
+// const can not be redclared & redefined
+___
+
+// Hoisting
+
+console.log(a)
+var a=10
+
+// var variables are hosited- means those variables 
+// declaration goes on top, does not matter where
+// they declared in the code
+
+// var a
+// console.log(a)
+// a=10
+
+// let variables are not hoisted
+
+undefined- we have not assigned
+null- manually null assigned
+____________
+
+// Datatype-
+//   string
+//   number
+//   undefined
+//   object
+//   boolean
+
+// let a=10
+// let a=false
+// let a=undefined
+// let a=null
+// let a={a:10, b:20}
+let a=[4,2,6,6,"joe",true];   // Array.isArray(a)
+console.log(a)
+console.log(typeof a)
+
+___
+
+Websites- 
+w3school
+geeksforgeeks
+mdn
+
+HW-
+Types of functions in JS(4)-
+Func expression
+IIFE
+Anonymous functions
+arrow functions
+
+// func hoisting
+// abc()
+
+// Named/func declration
+// function abc(){
+//   console.log('India')
+// }
+
+// func expression - not hoisted
+// const abc= function(){
+//   console.log('India')
+// }
+
+// Arrow function - not hoisted
+// const abc= ()=> {
+//   console.log('India')
+// }
+// abc()
+ 
+// IIFE use anonymous func
+(function() {
+  console.log("India");
+})();
+_________________________
+
+map, filter, every, some
+
+const arr=[1,2,3,4,5,6]
+const number=arr.filter(x=> x%3);
+console.log(number)
+
+// const a=3
+// const b='3'
+// console.log(a==b)
+
+// 0 false
+// anything else is true
+
+// const arr=[1,2,3,4,5,6]
+// const number=arr.filter(x=> x%3);
+// console.log(number)
+
+// const a=3
+// const b='3'
+// console.log(a==b)
+
+// 0 false
+// anything else is true
+
+console.log(true || 'India' || true || false)
+
+// &&- always looks for false 
+
+const arr=[14,70,126]
+const result=arr.every(num => num%14===0)
+console.log(result)
+____________
+
+// String Literals
+// Destructuring
+// Rest parameters(...) 
+// spread operator(...)
+
+// String Literals
+
+let fname='Nikhil'
+let city="Noida"
+
+// "Nikhil lives in Noida. Bye"
+
+// ES5
+// console.log(fname+" lives in "+city+"."+ " Bye")
+
+// ES6
+// console.log(`${fname} lives in ${city}. Bye`)
+
+// let str=`I 
+// am
+// Indian`
+
+// console.log(str)
+___________________________
+
+// Destructuring
+let obj={
+  id:1,
+  fname:"Nikhil",
+  city:"Noida",
+  pin:201301
+}
+
+// take fname and pin in 2 varaibles and print
+
+// ES5
+// let fname= obj.fname
+// let pin= obj.pin
+
+// ES6
+let {id,city}=obj
+console.log(id,city)
+
+// Destructuring
+let arr=[1,2,3,4,5]
+
+// store 2 and 4 into two variables x and y
+
+let [,x,,y,]= arr
+
+
+let x=a[1];
+let y=a[3];
+console.log(x,y)
+
+// spread operator(...)
+
+let obj1={
+  id:1,
+  fname:"Nikhil",
+  city:"Noida",
+  pin:201301
+}
+
+let obj2={
+  fname:"Rohit",
+  city:"Muktsar",
+  state:"Punjab",
+  country:"India"
+}
+
+let res= {...obj2,...obj1}
+console.log(res)
+
+// spread operator(...)
+
+let arr1=[1,2,3,undefined,5]
+let arr2=[4,5,6,7,8]
+
+// ES6
+// let res= [...arr1,...arr2]
+
+// ES5
+console.log(arr1.concat(arr2));
+
+// console.log(res)
+
+
+// ES5
+console.log(Object.assign(obj1, obj2));
+
+// console.log(res)
+
+HW-
+Rest parameters(...) 
+reduce
+DOM manipulate
+class, object, constructor, inheritance
+
+20-30 min start- task
+
+_________________________
+
+23-06-2025
+
+// Rest parameters(...)
+
+// const arr=[4,1,2,4,6]
+// let sum=0
+// arr.forEach(item=>sum=sum+item)
+// console.log(sum)
+
+function add(x,y){
+  const result= x+y
+  console.log(typeof result)
+  console.log(`sum is ${result}`); // implicit typecasting
+  let b=7.5
+  console.log(result+b)
+  console.log(typeof b)
+  console.log(`float is ${b}`)
+}
+
+add(4,7)
+
+// Default parameters(...)
+
+// const arr=[4,1,2,4,6]
+// let sum=0
+// arr.forEach(item=>sum=sum+item)
+// console.log(sum)
+
+function add(x,y=1,z=5){               //formal parameter
+  const result= x+y+z
+  console.log(result)
+}
+
+add(4,10);          //14         actual parameter
+add(4,5,6);        //15
+add(4,9,8,9);      //30
+add(6);            //6
+add()
+
+// 19, 15, 21, 12, NaN
+
+HW-
+https://www.w3schools.com/js/js_array_methods.asp
+https://www.w3schools.com/js/js_string_methods.asp
+ 
+// Rest parameters(...)
+
+// const arr=[4,1,2,4,6]
+// let sum=0
+// arr.forEach(item=>sum=sum+item)
+// console.log(sum)
+
+function add(...arr){               //formal parameter
+ console.log(arr)
+  let sum=0
+  arr.forEach(item=>sum=sum+item)
+  console.log(sum)
+}
+
+add(4,10);          //14         actual parameter
+add(4,5,6);        //15
+add(4,9,8,9);      //30
+add(6);            //6
+add()
+
+// 19, 15, 21, 12, NaN
+_________________________
+
+// class, object, constructor, inheritance
+class Person{
+  constructor(fname, lang){
+    this.firstName= fname
+    this.language= lang
+  }
+  
+//   task- write a method that prints- "Nikhil likes JS"
+  show() {
+    return `${this.firstName} likes ${this.language}`;
+  }
+}
+// const obj1= new Person('Nikhil', 'JS')
+// obj1.show()
+
+class B extends Person {
+  constructor(p,q,r){
+    super(q,r)
+    this.city=p
+  }
+  
+  display() {
+    console.log(`${this.show()} & lives in ${this.city} hello ${this.firstName}`);
+  }
+}
+const obj2= new B('Noida','Nikhil', 'JS')
+console.log(obj2.firstName)
+obj2.display()
+
+class C extends B{}       //multi level supports
+
+// multiple doesnt support
+
+// hierarichal support-  multiple child class inherit same parent
+class B extends Person{} 
+class C extends Person{} 
+___________________________ 
+
+const arr=[4,1,2,4,6]
+// let sum=1
+// arr.forEach(item=>sum=sum*item)
+// console.log(sum)
+
+const sum= arr.reduce((sum,item)=>sum> item? sum:item,1)
+console.log(sum)
+_________________________
+
+error handling
+Promise, 
+
+async await
+
+Promise- bad thing-- same time execute- right/wrong
+Observables- backend new data, subscribe
+
+async function abc(){
+ sta A
+ await Sta B (time consuming)
+ Sta C  (depends on B)
+}
+
+
+node -v
+v22.15.0
+
+Angular- 20
+npm install -g @angular/cli
+___________________________
+
+24-06-2025
+ng version
+
+Create new project-
+ng new my-angular-app
+
+√ Do you want to create a 'zoneless' application without zone.js (Developer Preview)? 
+No
+Zone.js : UI change- detect- process "Change Detection"
+zoneless: signals used for tracking changes (ng17)- performance fast & efficient
+
+√ Which stylesheet format would you like to use? 
+Sass (SCSS)
+css/plain css    or scss(css preprocessor)- resuable, efficient.
+e.g.
+myBlue="#234235"
+color: myBlue
+   
+√ Do you want to enable Server-Side Rendering(SSR) and Static Site Generation (SSG/Prerendering)? 
+No
+angular/html page coming from server
+pros- intial load faster
+cons- cant using security related sites, 
+
+
+cd my-angular-app
+code .
+ng serve
+http://localhost:4200/
+
+ps1 issue-
+Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass
+
+https://www.geeksforgeeks.org/javascript/server-side-rendering-vs-client-side-rendering-vs-server-side-generation/
+
+2 way binding
+SPA- Single Page Application
+MPA
+
+https://www.geeksforgeeks.org/blogs/spa-vs-mpa-which-one-is-better-for-you/
+spa-root path loads once and then only child route changes
+mpa- each page loads seprately, older way
+
+app- root component
+index.html- entry path/root file
+
+app.ts- controller- dynamic calculation
+app.component.ts
+
+app.scss
+app.component.scss
+
+app.config.ts
+app.module.ts
+
+HW- 
+JS Methods
+DOM
+Dom manipulate
+Shadow DOM vs Virtual DOM
+
+copyWithin
+
+const fruits = ["Banana", "Orange", "Apple", "Mango", "Kiwi"];
+let ind= fruits.indexOf("Apple")
+// console.log(ind)
+fruits.splice(ind,1,"NOIDA")
+console.log(fruits)
+
+BUTTON1-        white- black- red- white(reset)
+BUTTON2-        white- black- red (toggling b/w red and black)
+
+shadow dom-
+encapsulation
+shadow dom- elements are encapsulated
+stops memory/styling leakage
+standalone component- private styles for that comp only
+styles.scss- global css
+
+Virtual DOM- React
+Real DOM- 
+copy virtual dom- old    copy virtual dom- new- diffing
+
+ng g c comp-name
+ng generate component comp-name
+(by default create under app folder)
+
+https://www.tektutorialshub.com/angular/angular-folder-structure-best-practices/
+
+earlier versions of Angular-
+@Component({
+    selector: 'app-basic-standalone',
+    templateUrl: './basic-standalone.component.html',
+    styleUrls: ['./basic-standalone.component.css'],
+    standalone: true
+})
+
+HW-
+Day-6 info
+angular type of data binding
+
+Why use Modules
+•	NgModule- angular 16-17,  @- decorator, app.config.ts
+•	Declarations
+•	Providers- collects services
+•	services- api calling, ayncs task
+•	Imports- if you want to use other modules in your component then you mention
+•	exports- if you want expose the modules
+•	Bootstrapping
+•	The Core Module- if you want to create a feature- home, products and 
+	singleton service- create instance once- authService.ts  
+•	Shared Modules- resuables module- header footer
+
+Introduction to Components and Its types
+•	Components Architecture Pattern
+•	Decorator Metadata
+•	State & Behavior
+
+Type of data binding
+One way-
+Interpolation
+Property Binding
+Event Binding
+
+Two Way-
+ngModel
+
+HW-
+TASK1-
+1. home- span- colour blue --------------> BLUE
+2. aboutus - span- no colour ------------> RED
+3. styles.scss- span- colour red
+
+TASK2-
+In above, both span should have the font which is mentioned in the styles.css
+styles.scss- font:algerian/
+
+TASK3- 
+Intial Routing-
+Horizontal Navigation Bar
+___________________________
+
+Day 7  : 30-June-2025
+Sujit
+Bikram
+
+bootstrap- responsive structure/device friendly
+css- enhance styling
+
+Third party package-
+Bootstrap-
+permanent- dependencies- npm i bootstrap
+dev purpose- devDependencies- npm i bootstrap --save-dev
+
+uninstall- npm uninstall bootstrap
+
+https://www.w3schools.com/css/tryit.asp?filename=trycss_navbar_horizontal_black_active
+
+
+step 1-
+npm i bootstrap
+
+step 2-
+style.scss-
+@use 'bootstrap/scss/bootstrap';
+
+create bundle
+ng build
+
+Routing-
+ <a routerLinkActive="active" routerLink="">Home</a>
+ .ts-> import RouterModule
+ 
+href- page reload
+	- no refresh
+
+routerLinkActive="active"- apply active class on selected tab
+
+1. nested routing
+2. route gaurd
+
+HW-
+Sign up page---> click register button--> sign in page--> login button --> 
+Home page---> current page---> logout button --> sign in page
+___
+
+Day 8: 01-July-2025
+
+Type of data binding
+One way-
+Interpolation (comp--->view)
+Property Binding
+Event Binding
+
+Two Way-
+ngModel
+
+steps to add a new comp-
+ng g c data-binding
+add route
+add li in the navbar
+
+ngModel-
+imports formsModule
+
+below angular 20-
+<input type="text" [{ngModel}]="user" />
+Hola {{ user }}
+
+angular 20-
+<input type="text" [(ngModel)]="user" #ctrl="ngModel" />
+Hola {{ user }}
+
+Directive-  DOM manipulation
+Structural Directive- Change the strcuture- *nglf else, *nfgFor and *ngSwitch
+Attribute Directive- styling change- ngClass and ngStyle
+
+*ngFor(15-16)    @for(17 onwards)
+before-  
+@for (let hobby of hobbies; track hobby){
+20-
+@for (hobby of hobbies; track hobby){
+
+*ngIf     @if
+
+Attribute directive-
+import CommonModule
+
+1. Data Binding
+One way- 
+2. Directives
+Structural - if, for, switch
+Attribute- ngClass, ngStyle
+
+Task- 
+if user clicks on btn1- change colour to red and circular
+is user clicks on btn2- populuate the listing of all four directions using @for
+
+passing color in directive- after lifecycle method- ngOnInit
+
+services, lifecycle
+
+The metadata, providedIn: 'root', means that the Service is visible 
+throughout the application.
+
+TASK-
+Use the api in services & print the data in tabular format
+api- https://reqres.in/api/users?page=2
+
+
+
+QnA-
+https://angular.dev/guide/components/lifecycle
+https://angular.dev/tutorials/first-app/09-services
+
+// created comp Users- ng g c components/users
+// created service- ng g service services/user
+
+// @Injectable({
+//   providedIn: 'root'
+// })
+// single instance through out the application
+
+Fit/Healthy/ Study
+Excercise(20%)- 1-1.5 Hr        OR session (20-30%)
+Diet(80%)     - 16 Hrs          OR HW/Practice (70%)
+___________________________
+___________________________
+
+Day 13- 08/07/2025
+
+Tuesday- Lifecycle Part1
+Wed- Lifecycle Part1 + Routing - Router, activatedRoute, Route Gaurds
+Thurs- Practice Routing + @Input and @Output decorator
+Friday- Forms
+_______________________
+
+Last- Latest Feature Angular 17-20
+
+in app.ts-
+if using routing-
+imports: [RouterOutlet, RouterModule]
+
+if directly using any comp-
+imports: [Lifecycle]
+
+create-
+component- ng g component folder-name/comp-name
+directive- ng g directive folder-name/directive-name
+pipe- ng g pipe folder-name/pipe-name
+service- ng g service folder-name/service-name
+guard- ng g guard folder-name/guard-name
+
+async- rxjs
+
+Ques-
+In how many ways we can consume the services?
+
+in servies-
+getData(){
+	return "any string"
+	}
+	
+comp?
+constructor - we can cnsume it
+
+in servies-
+getData(){
+	return http call
+	}
+
+comp-
+consume?
+subscribe in ngOninit
+
+rxjs- manually observable-
+of([3,4,5,3])
+consume?
+
+data: Observale<any>
+html? async to consume observable
+
+extends- class
+implements- interface
+______________________________________________________________
+
+LIFECYCLE-
+With every state change, there are many specific moments where certain assets become available.
+An important aspect of these hooks is their order of execution. It never deviates
