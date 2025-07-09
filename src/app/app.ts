@@ -15,3 +15,6 @@ export class App {
   firstName = 'Rahul';
   showLifecycle = true;
 }
+
+// Route guard
+// https://raghuvardhankaranam.medium.com/route-guards-in-angular-c2c01fe6167b

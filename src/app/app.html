@@ -27,7 +27,7 @@
 <div class="container">
   <button (click)="showLifecycle=false">Hide Lifecycle</button>
   <button (click)="firstName='Seema'">Change First Name</button>
-  <app-lifecycle *ngIf="showLifecycle" [fname]="firstName"></app-lifecycle>
+  <app-lifecycle *ngIf="showLifecycle"  [fname]="firstName"></app-lifecycle>
 </div>
 
 <!-- ngOnChanges is called before ngOnInit because ngOnChanges 
