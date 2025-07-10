@@ -24,11 +24,17 @@
   <router-outlet></router-outlet>
 </div> -->
 
-<div class="container">
+<!-- <div class="container">
   <button (click)="showLifecycle=false">Hide Lifecycle</button>
   <button (click)="firstName='Seema'">Change First Name</button>
-  <app-lifecycle *ngIf="showLifecycle"  [fname]="firstName"></app-lifecycle>
-</div>
+  <button (click)="changeName()">Change Name</button>
+  <button (click)="changeReference()">Change Reference</button>
+  <app-lifecycle
+    *ngIf="showLifecycle"
+    [person]="personObj"
+    [fname]="firstName"
+  ></app-lifecycle>
+</div> -->
 
 <!-- ngOnChanges is called before ngOnInit because ngOnChanges 
 is responsible for assigning the initial vaiue to input -->

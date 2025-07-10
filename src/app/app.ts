@@ -13,7 +13,17 @@ import { CommonModule } from '@angular/common';
 export class App {
   protected title = 'my-angular-app';
   firstName = 'Rahul';
+  personObj = { name: 'Nikhil' };
   showLifecycle = true;
+
+  changeName() {
+    // Doesn't change reference — ngOnChanges won't be called
+    this.personObj.name = 'Singhal';
+  }
+  changeReference() {
+    // Changes reference — ngOnChanges will be called
+    this.personObj = { name: 'Changed Reference' };
+  }
 }
 
 // Route guard
