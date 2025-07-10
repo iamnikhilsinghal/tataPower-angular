@@ -1,12 +1,14 @@
 import { Component } from '@angular/core';
-import { Lifecycle } from './components/lifecycle/lifecycle';
-import { CommonModule } from '@angular/common';
-// import { RouterModule, RouterOutlet } from '@angular/router';
+// import { Lifecycle } from './components/lifecycle/lifecycle';
+// import { CommonModule } from '@angular/common';
+// import { Lifecycle2 } from './components/lifecycle2/lifecycle2';
+import { RouterModule, RouterOutlet } from '@angular/router';
 
 @Component({
   selector: 'app-root',
-  // imports: [RouterOutlet, RouterModule],
-  imports: [Lifecycle, CommonModule],
+  imports: [RouterOutlet, RouterModule],
+  // imports: [Lifecycle, CommonModule],
+  // imports: [Lifecycle2],
   templateUrl: './app.html',
   styleUrl: './app.scss',
 })
