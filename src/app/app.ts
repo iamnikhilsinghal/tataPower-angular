@@ -1,18 +1,18 @@
 import { Component } from '@angular/core';
-import { Child } from './components/child/child';
-import { ContentAndViewChild } from './components/content-and-view-child/content-and-view-child';
+// import { Child } from './components/child/child';
+// import { ContentAndViewChild } from './components/content-and-view-child/content-and-view-child';
 // import { Lifecycle } from './components/lifecycle/lifecycle';
 // import { CommonModule } from '@angular/common';
 // import { Lifecycle2 } from './components/lifecycle2/lifecycle2';
-// import { RouterModule, RouterOutlet } from '@angular/router';
+import { RouterModule, RouterOutlet } from '@angular/router';
 
 @Component({
   selector: 'app-root',
-  // imports: [RouterOutlet, RouterModule],
+  imports: [RouterOutlet, RouterModule],
   // imports: [Lifecycle, CommonModule],
   // imports: [Lifecycle2],
   // imports: [Child],
-  imports: [ContentAndViewChild],
+  // imports: [ContentAndViewChild],
   templateUrl: './app.html',
   styleUrl: './app.scss',
 })

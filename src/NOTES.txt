@@ -740,3 +740,6 @@ ______________________________________________________________
 LIFECYCLE-
 With every state change, there are many specific moments where certain assets become available.
 An important aspect of these hooks is their order of execution. It never deviates
+
+LAZY
+    loadComponent: () => import('./components/lazy/lazy').then((m) => m.Lazy),

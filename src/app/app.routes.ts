@@ -12,6 +12,10 @@ export const routes: Routes = [
   { path: '', component: Home },
   { path: 'aboutUs', component: AboutUs },
   {
+    path: 'lazy',
+    loadComponent: () => import('./components/lazy/lazy').then((m) => m.Lazy),
+  },
+  {
     path: 'products',
     component: Products,
   },
