@@ -48,10 +48,16 @@ is responsible for assigning the initial vaiue to input -->
   <app-lifecycle2></app-lifecycle2>
 </div> -->
 
-<div class="container">
+<!-- <div class="container">
   <app-child
     [country]="countryFromParent"
     (countryFromChild)="recievedCountry($event)"
   ></app-child>
   value coming from child- {{ childCountry }}
+</div> -->
+
+<div class="container">
+  <app-content-and-view-child>
+    <p #projectedParagraph>Hello !!</p>
+  </app-content-and-view-child>
 </div>
