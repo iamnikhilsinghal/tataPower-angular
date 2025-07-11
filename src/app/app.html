@@ -1,4 +1,4 @@
-<ul>
+<!-- <ul>
   <li>
     <a
       routerLink=""
@@ -22,7 +22,7 @@
 
 <div class="container-fluid">
   <router-outlet></router-outlet>
-</div>
+</div> -->
 
 <!-- <div class="container">
   <button (click)="showLifecycle=false">Hide Lifecycle</button>
@@ -36,7 +36,7 @@
   ></app-lifecycle>
 </div>
 
-<!-- ngOnChanges is called before ngOnInit because ngOnChanges 
+ ngOnChanges is called before ngOnInit because ngOnChanges 
 is responsible for assigning the initial vaiue to input -->
 
 <!-- ngOnChanges is called before ngOnInit during the component
@@ -47,3 +47,11 @@ is responsible for assigning the initial vaiue to input -->
 <!-- <div class="container">
   <app-lifecycle2></app-lifecycle2>
 </div> -->
+
+<div class="container">
+  <app-child
+    [country]="countryFromParent"
+    (countryFromChild)="recievedCountry($event)"
+  ></app-child>
+  value coming from child- {{ childCountry }}
+</div>
