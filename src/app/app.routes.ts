@@ -12,6 +12,7 @@ import { Profile } from './components/system/profile/profile';
 import { Notification } from './components/system/notification/notification';
 import { Login } from './components/login/login';
 import { TemplateDriven } from './components/template-driven/template-driven';
+import { UserDetail } from './components/user-detail/user-detail';
 
 export const routes: Routes = [
   { path: '', component: Home },
@@ -40,6 +41,11 @@ export const routes: Routes = [
     path: 'users',
     component: Users,
     canActivate: [AuthGuard],
+    canMatch: [AuthGuard],
+  },
+  {
+    path: 'users/:id',
+    component: UserDetail,
   },
   {
     path: 'system',

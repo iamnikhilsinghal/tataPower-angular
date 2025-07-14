@@ -10,8 +10,13 @@ import {
   CanActivate,
   CanActivateChild,
   CanDeactivate,
+  CanMatch,
+  GuardResult,
+  MaybeAsync,
+  Route,
   Router,
   RouterStateSnapshot,
+  UrlSegment,
 } from '@angular/router';
 import { Observable } from 'rxjs';
 
@@ -26,14 +31,21 @@ export class AuthGuard
   implements
     CanActivate,
     CanActivateChild,
-    CanDeactivate<CanComponentDeactivate>
+    CanDeactivate<CanComponentDeactivate>,
+    CanMatch
 {
   isLoggedin = false;
   // isLoggedin= this.auth.service()-----> token valid
 
   constructor(private router: Router) {}
 
+  canMatch(route: Route, segments: UrlSegment[]): boolean {
+    console.log('canMatch called');
+    return this.isLoggedin;
+  }
+
   canActivate(): boolean {
+    console.log('canActivate called');
     if (this.isLoggedin) {
       return true; // Allow access if the user is authenticated
     } else {
@@ -67,7 +79,6 @@ export class AuthGuard
   canDeactivate(
     component: CanComponentDeactivate
   ): Observable<boolean> | Promise<boolean> | boolean {
-    console.log('11');
     return component.canDeactivate ? component.canDeactivate() : true;
   }
 }
