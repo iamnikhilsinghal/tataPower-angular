@@ -43,6 +43,7 @@ export const routes: Routes = [
   {
     path: 'system',
     component: System,
+    canActivateChild: [AuthGuard],
     children: [
       {
         path: 'profile',
