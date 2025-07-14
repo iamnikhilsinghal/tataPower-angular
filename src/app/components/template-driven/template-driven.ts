@@ -1,21 +1,24 @@
 import { Component } from '@angular/core';
-import { CanComponentDeactivate } from '../../guards/auth-guard';
+import { FormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-template-driven',
-  imports: [],
+  imports: [FormsModule],
   templateUrl: './template-driven.html',
   styleUrl: './template-driven.scss',
 })
-export class TemplateDriven implements CanComponentDeactivate {
-  isDataChanged = false;
+export class TemplateDriven {
+  userDetails = {
+    fname: '',
+    email: '',
+  };
 
-  canDeactivate(): boolean {
-    if (this.isDataChanged) {
-      return confirm(
-        'You have unsaved changes. Are you sure you want to leave?'
-      );
+  submitForm(form: any): void {
+    // console.log('form', form);
+    if (form.valid) {
+      console.log('Form data:', this.userDetails);
+    } else {
+      console.log('form is invalid');
     }
-    return true;
   }
 }

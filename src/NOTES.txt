@@ -727,19 +727,154 @@ consume?
 subscribe in ngOninit
 
 rxjs- manually observable-
-of([3,4,5,3])
+
 consume?
 
 data: Observale<any>
 html? async to consume observable
 
-extends- class
-implements- interface
+
+less HW - LACKING
+more in class  -- 2hr   3hrs     2.5 months  
+Project based learning -- topics-- Project
+give example question to trainees -- 2 hrs+ 1 hr 
+
+
+09 July- A (100/100)   ---> HW(20) ---> 80
+10 July- B
+___________________________
+
+Day 15
+ngOnChanges: Only detects changes when @Input reference changes.
+ngDoCheck: Called on every change detection, can be used to detect changes inside object properties.
+
+
+ng-content- used to load the content of a selector
+e.g
+<comp-name>  
+	content
+</comp-name>
+
+@ContentChild - used to use the references and child selectors inside
+content
+
+ngOnint====ngAfterContentInit
+ngdocheck==== ngAfterContentChecked
+
+Mayank
+Abhishek
+Swati
+
+
+
+HW-
+ngAfterViewInit -----> ngOninit-----> ngAfterContentInit
+ngAfterViewChecked ----->ngAfterContentChecked
+@ViewChild()    --->   @ContentChild
+___________________________
+
+https://medium.com/@hish.abdelshafouk/route-guards-in-angular-c9da0d815ef4
+
+Lazy laoding
+
+TASK-
+We have a input text box and when user starts typing inside that
+we show a message below txt box that 
+'Hello User'
+
+Note- Use ngOnChanges
+
+Time- 2-3 mins
+___________________________
+
+ngOnChanges works only on the @input proprty thats being passed from
+the parent
+
+created variable in same comp and tracking changes in that variable using
+ngOnChanges then its not the right approach bcoz
+
+abc:string     local variable
+@Input abc : string--- must passed from parent 
+
+Lazy -
+Products- 10 api - product, filters
+when user reach this page, only then these 10 api should be called
+pros-
+page initial load fast
+
+cons-
+specific lazy page will take lil more time then expected, why?
+___________________________
+
+Pending topics till Monday Day-17
+HW-
+Types of Forms
+Routing- Route Params
+Promise
+___________________________
+
+Day- 17  14/07/25
+Route Guards
+Promise
+Template Driven Forms
+
+Day- 18  15/07/25
+Template Driven Forms
+Reactive form	
+
+Day 19 16/07/25
+Local and session storage
+Unit Testing
+Material
+pagination
+Rxjs- pending function
+
+Thurs & Friday-
+Project days and pending topics/doubts
+
+can we control changes if closing tab
+
+TUESDAY-
+TEAM- SELECT PROJECTS
+PENDING TOPICS
+
+
+canMatch/canLoad-
+step1 
+will not load/ comp will not exist in the dom
+lazy loaded comp
+CanMatch can be more performant because it prevents routes from 
+even being considered
+
+canActivate-
+step2
+will load but not activate the route
+comp will load in the dom
+CanActivate comes into play after the route has been matched
+
+Tuesday Task-
+CRUD Table-
+1. Service that takes data from api- https://reqres.in/api/users?page=2
+2. Comp will inject that service and subscribe the api
+3. Assign that array into a local varaible
+4. Render that array using @for
+5. Click on one row should navigate to single user data-
+https://reqres.in/api/users/2
+6. Add- open form to add user
+7. delete- open popup- do you want to delete? 
+8. yes- next popup- user deleted
+9. edit- navigate to filled user form 
 ______________________________________________________________
 
-LIFECYCLE-
-With every state change, there are many specific moments where certain assets become available.
-An important aspect of these hooks is their order of execution. It never deviates
+https://medium.com/@jaydeepvpatil225/forms-in-angular-8fde7d0dcdf6
+___________________________
 
-LAZY
-    loadComponent: () => import('./components/lazy/lazy').then((m) => m.Lazy),
+Types of forms-
+Template-Driven Forms
+controlled by template- html
+ngModel
+Security less- dom exposed- form vulnerability inject issue
+
+Reactive Forms- WE WILL USE THIS TYPE OF FORM
+comp.ts controls it
+each form field is considered a FormControl

@@ -1,2 +1,15 @@
-<p>template-driven works!</p>
-<input type="text" (input)="isDataChanged = true" />
+<h3>Template Driven Form</h3>
+
+<form #userForm="ngForm" (ngSubmit)="submitForm(userForm)">
+  First Name:
+  <br />
+  <input type="text" name="fname" [(ngModel)]="userDetails.fname" required />
+  <div class="text-danger">First Name is required</div>
+
+  <br /><br />
+  Email:
+  <br />
+  <input type="email" name="email" [(ngModel)]="userDetails.email" />
+  <br /><br />
+  <button type="submit" class="btn btn-primary">Submit</button>
+</form>
