@@ -11,7 +11,9 @@ import { CanActivate, Router } from '@angular/router';
   providedIn: 'root',
 })
 export class AuthGuard implements CanActivate {
-  isLoggedin = true;
+  isLoggedin = false;
+  // isLoggedin= this.auth.service()-----> token valid
+
   constructor(private router: Router) {}
 
   canActivate(): boolean {

@@ -10,9 +10,14 @@ import { AuthGuard } from './guards/auth-guard';
 import { System } from './components/system/system';
 import { Profile } from './components/system/profile/profile';
 import { Notification } from './components/system/notification/notification';
+import { Login } from './components/login/login';
 
 export const routes: Routes = [
   { path: '', component: Home },
+  {
+    path: 'login',
+    component: Login,
+  },
   { path: 'aboutUs', component: AboutUs },
   {
     path: 'lazy',
