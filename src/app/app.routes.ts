@@ -11,6 +11,7 @@ import { System } from './components/system/system';
 import { Profile } from './components/system/profile/profile';
 import { Notification } from './components/system/notification/notification';
 import { Login } from './components/login/login';
+import { TemplateDriven } from './components/template-driven/template-driven';
 
 export const routes: Routes = [
   { path: '', component: Home },
@@ -54,6 +55,11 @@ export const routes: Routes = [
         component: Notification,
       },
     ],
+  },
+  {
+    path: 'template-driven',
+    component: TemplateDriven,
+    canDeactivate: [AuthGuard],
   },
   { path: '**', component: PageNotFound },
 ];

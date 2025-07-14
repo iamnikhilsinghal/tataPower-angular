@@ -9,14 +9,25 @@ import {
   ActivatedRouteSnapshot,
   CanActivate,
   CanActivateChild,
+  CanDeactivate,
   Router,
   RouterStateSnapshot,
 } from '@angular/router';
+import { Observable } from 'rxjs';
+
+export interface CanComponentDeactivate {
+  canDeactivate: () => Observable<boolean> | Promise<boolean> | boolean;
+}
 
 @Injectable({
   providedIn: 'root',
 })
-export class AuthGuard implements CanActivate, CanActivateChild {
+export class AuthGuard
+  implements
+    CanActivate,
+    CanActivateChild,
+    CanDeactivate<CanComponentDeactivate>
+{
   isLoggedin = false;
   // isLoggedin= this.auth.service()-----> token valid
 
@@ -50,5 +61,13 @@ export class AuthGuard implements CanActivate, CanActivateChild {
     //   this.router.navigate(['/login']); // Redirect to login if not authenticated
     //   return false; // Prevent access to the route
     // }
+  }
+
+  // component.canDeactivate() - this will be called if there are certain changes
+  canDeactivate(
+    component: CanComponentDeactivate
+  ): Observable<boolean> | Promise<boolean> | boolean {
+    console.log('11');
+    return component.canDeactivate ? component.canDeactivate() : true;
   }
 }
