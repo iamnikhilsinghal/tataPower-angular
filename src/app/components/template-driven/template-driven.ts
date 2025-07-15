@@ -1,9 +1,10 @@
+import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-template-driven',
-  imports: [FormsModule],
+  imports: [FormsModule, CommonModule],
   templateUrl: './template-driven.html',
   styleUrl: './template-driven.scss',
 })
@@ -14,7 +15,6 @@ export class TemplateDriven {
   };
 
   submitForm(form: any): void {
-    // console.log('form', form);
     if (form.valid) {
       console.log('Form data:', this.userDetails);
     } else {

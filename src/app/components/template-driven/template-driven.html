@@ -3,8 +3,23 @@
 <form #userForm="ngForm" (ngSubmit)="submitForm(userForm)">
   First Name:
   <br />
-  <input type="text" name="fname" [(ngModel)]="userDetails.fname" required />
-  <div class="text-danger">First Name is required</div>
+  <input
+    type="text"
+    name="fname"
+    [(ngModel)]="userDetails.fname"
+    #fname="ngModel"
+    required
+    minlength="4"
+  />
+
+  <div *ngIf="(fname?.touched || userForm.submitted) && fname?.invalid">
+    <div *ngIf="fname?.errors?.['required']" class="text-danger">
+      First Name is required
+    </div>
+    <div *ngIf="fname?.errors?.['minlength']" class="text-danger">
+      First Name must contain atleast 4 chars
+    </div>
+  </div>
 
   <br /><br />
   Email:
