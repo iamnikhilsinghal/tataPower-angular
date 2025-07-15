@@ -1,0 +1,44 @@
+<h3>Reactive Form</h3>
+<form [formGroup]="loginForm" (ngSubmit)="submitForm()">
+  First Name:
+  <br />
+  <input type="text" name="fname" formControlName="fname" />
+  <div
+    *ngIf="(loginForm.controls.fname?.touched || isFormSubmitted) && loginForm.controls.fname?.invalid"
+  >
+    <div
+      *ngIf="loginForm.controls.fname?.errors?.['required']"
+      class="text-danger"
+    >
+      First Name is required
+    </div>
+    <div
+      *ngIf="loginForm.controls.fname?.errors?.['minlength']"
+      class="text-danger"
+    >
+      First Name must contain atleast 4 chars
+    </div>
+    <div
+      *ngIf="loginForm.controls.fname?.errors?.['noNumbers']"
+      class="text-danger"
+    >
+      First Name should not have numbers
+    </div>
+  </div>
+  <br /><br />
+  Email:
+  <br />
+  <input type="email" name="email" formControlName="email" />
+  <div
+    *ngIf="(loginForm.controls.email?.touched || isFormSubmitted) && loginForm.controls.email?.invalid"
+  >
+    <div
+      *ngIf="loginForm.controls.email?.errors?.['email']"
+      class="text-danger"
+    >
+      Email must have proper format
+    </div>
+  </div>
+  <br /><br />
+  <button type="submit" class="btn btn-primary">Submit</button>
+</form>

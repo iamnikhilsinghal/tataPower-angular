@@ -13,6 +13,7 @@ import { Notification } from './components/system/notification/notification';
 import { Login } from './components/login/login';
 import { TemplateDriven } from './components/template-driven/template-driven';
 import { UserDetail } from './components/user-detail/user-detail';
+import { Reactive } from './components/reactive/reactive';
 
 export const routes: Routes = [
   { path: '', component: Home },
@@ -66,6 +67,10 @@ export const routes: Routes = [
     path: 'template-driven',
     component: TemplateDriven,
     canDeactivate: [AuthGuard],
+  },
+  {
+    path: 'reactive',
+    component: Reactive,
   },
   { path: '**', component: PageNotFound },
 ];
