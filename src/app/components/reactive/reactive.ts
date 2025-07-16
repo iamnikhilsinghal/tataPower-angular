@@ -28,7 +28,7 @@ export class Reactive {
         '',
         [Validators.required, Validators.minLength(4), noNumbersValidator],
       ],
-      email: ['', [Validators.email]],
+      email: ['', [Validators.required, Validators.email]],
     });
   }
 

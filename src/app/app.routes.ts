@@ -14,6 +14,7 @@ import { Login } from './components/login/login';
 import { TemplateDriven } from './components/template-driven/template-driven';
 import { UserDetail } from './components/user-detail/user-detail';
 import { Reactive } from './components/reactive/reactive';
+import { PaginatedTable } from './components/paginated-table/paginated-table';
 
 export const routes: Routes = [
   { path: '', component: Home },
@@ -71,6 +72,10 @@ export const routes: Routes = [
   {
     path: 'reactive',
     component: Reactive,
+  },
+  {
+    path: 'paginated-table',
+    component: PaginatedTable,
   },
   { path: '**', component: PageNotFound },
 ];

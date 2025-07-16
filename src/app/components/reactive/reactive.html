@@ -33,6 +33,12 @@
     *ngIf="(loginForm.controls.email?.touched || isFormSubmitted) && loginForm.controls.email?.invalid"
   >
     <div
+      *ngIf="loginForm.controls.email?.errors?.['required']"
+      class="text-danger"
+    >
+      Email is required
+    </div>
+    <div
       *ngIf="loginForm.controls.email?.errors?.['email']"
       class="text-danger"
     >

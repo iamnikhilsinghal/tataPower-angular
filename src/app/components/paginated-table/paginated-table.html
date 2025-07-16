@@ -1,0 +1,12 @@
+<div class="list">
+  <ul>
+    <li
+      *ngFor="let item of collection | paginate: { itemsPerPage: 10, currentPage: pageNo }"
+    >
+      {{ item }}
+    </li>
+  </ul>
+
+  <button (click)="pageNo=1">First</button>
+  <pagination-controls (pageChange)="pageNo = $event"></pagination-controls>
+</div>
