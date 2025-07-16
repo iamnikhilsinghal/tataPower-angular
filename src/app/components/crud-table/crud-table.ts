@@ -2,6 +2,14 @@ import { Component } from '@angular/core';
 import { Employees } from './dummy-data';
 import { Router } from '@angular/router';
 
+interface USER {
+  id: number;
+  name: string;
+  email: string;
+  address: string;
+  phone: string;
+}
+
 @Component({
   selector: 'app-crud-table',
   imports: [],
@@ -9,7 +17,7 @@ import { Router } from '@angular/router';
   styleUrl: './crud-table.scss',
 })
 export class CrudTable {
-  users = Employees;
+  users: USER[] = Employees;
 
   constructor(private router: Router) {}
 
