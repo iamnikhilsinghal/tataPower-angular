@@ -37,6 +37,8 @@ export class Lazy {
   }
 
   ngOnInit() {
+    localStorage.setItem('local_key', 'Ram');
+
     // const x = signal(2);
     // const y = signal(3);
     // const sum = computed(() => x() + y());

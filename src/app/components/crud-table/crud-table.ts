@@ -18,6 +18,7 @@ interface USER {
 })
 export class CrudTable {
   users: USER[] = Employees;
+  myLocalKey = localStorage.getItem('local_key');
 
   constructor(private router: Router) {}
 
@@ -29,5 +30,10 @@ export class CrudTable {
     console.log('id', id);
     this.router.navigate([`/users/${id}`]);
     // users/:id
+  }
+
+  ngOnDestroy() {
+    localStorage.removeItem('local_key');
+    // localStorage.clear()
   }
 }
