@@ -814,20 +814,22 @@ Promise
 ___________________________
 
 Day- 17  14/07/25
-Route Guards
-Promise
-Template Driven Forms
+Route Guards DONE
+Template Driven Forms DONE
 
 Day- 18  15/07/25
-Template Driven Forms
-Reactive form	
+Template Driven Forms DONE
+Reactive form DONE
+Promise  HW
 
 Day 19 16/07/25
+Promise
 Local and session storage
 Unit Testing
 Material
 pagination
 Rxjs- pending function
+signals
 
 Thurs & Friday-
 Project days and pending topics/doubts
@@ -856,15 +858,17 @@ Tuesday Task-
 CRUD Table-
 1. Service that takes data from api- https://reqres.in/api/users?page=2
 2. Comp will inject that service and subscribe the api
-3. Assign that array into a local varaible
-4. Render that array using @for
-5. Click on one row should navigate to single user data-
+
+1,2- local dummy data
+3. Assign that array into a local varaible- DONE
+4. Render that array using @for- DONE
+5. Click on one row should navigate to single user data- DONE
 https://reqres.in/api/users/2
 6. Add- open form to add user
 7. delete- open popup- do you want to delete? 
 8. yes- next popup- user deleted
 9. edit- navigate to filled user form 
-______________________________________________________________
+___________________________
 
 https://medium.com/@jaydeepvpatil225/forms-in-angular-8fde7d0dcdf6
 ___________________________
@@ -878,3 +882,114 @@ Security less- dom exposed- form vulnerability inject issue
 Reactive Forms- WE WILL USE THIS TYPE OF FORM
 comp.ts controls it
 each form field is considered a FormControl
+
+
+Validations-
+focusout & Submit button
+
+CRUD Table + Project
+Excel online-- add teams members
+
+
+loginForm.submitted - its valid only for template driven forms
+
+Promise Vs Observables
+Promise always called automatically wherever written 
+it always called once
+
+Observables
+Observables called when we subscribe it 
+it can return data multiple times
+
+https://www.geeksforgeeks.org/javascript/javascript-promise/
+
+Pagination-
+HW
+First & last
+dropdown- items per page - 5,10,15,20
+
+
+
+Day 19- Wednesday  -- do
+crud table DONE
+promise- started
+
+Day 20- Thursuday
+rxjs- async call
+promise - DONE
+SSR- DONE
+signals- anglar 17+   DONE
+unit testing- test cases --   DONE
+storage-  DONE
+Material UI- 
+
+Day 21 Friday- Assesment-- Full Angular, Doubts
+
+Day Friday, Monday -- Doubts----->  Next Friday--- 
+1 week problems- Angular based
+
+Day 22- Monday- NODE
+
+PROMISE-
+let abc= new Promise((resolve,reject)=>{
+	async task
+}
+
+abc.then
+.catch
+
+single api call- subscribe
+multiple apis- seperate api- subscribe
+multple api - chained-- interdependent--> promise chaining
+
+promise chaining eg
+___________________________
+
+
+unit testing-
+individual comp test, properly work, developer unit test
+karma(test runner) plus jasmine(framwork)-  built in
+spec.ts---- testing file
+
+command-
+ng test      -- find files with entension- spec.ts
+
+
+Friday- Assesment
+
+
+local storage- theme, gmail
+session storage- irctc, secured, banking
+
+
+SSR-
+1. app-root -- html page visible
+2. ssg
+3. disbale JS, app loads initially
+
+"serve:ssr:my-ssr-project": "node dist/my-ssr-project/server/server.mjs"
+
+
+http://localhost:4000 - 
+it is a port of node server to load the html content
+
+___________________________
+
+On hold-
+switchMap- api chaining-- rxjs 
+material UI- forms
+
+
+Day 21- Doubts + Node(1 hr)
+(postgres + PGAdmin)
+Node- server    + DB (postgres) 
+
+Angular- 10 2nd midway assesment
+Node- 6 class  assesment
+Next Monday= 28th July
+
+username & password
+root
+
+postgres- 17.x
+pgadmin4
