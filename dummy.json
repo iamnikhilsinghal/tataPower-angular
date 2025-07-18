@@ -1,0 +1,109 @@
+obj={
+  "company": {
+    "name": "TechNova Solutions",
+    "founded": 2012,
+    "location": {
+      "country": "India",
+      "headquarters": {
+        "city": "Bengaluru",
+        "address": "123 Tech Park Avenue, Whitefield",
+        "coordinates": {
+          "latitude": 12.9716,
+          "longitude": 77.5946
+        }
+      },
+      "branches": [
+        {
+          "city": "Hyderabad",
+          "employees": 120
+        },
+        {
+          "city": "Mumbai",
+          "employees": 80
+        }
+      ]
+    },
+    "departments": [
+      {
+        "name": "Engineering",
+        "head": "Dr. Ananya Rao",
+        "teams": [
+          {
+            "teamName": "Frontend",
+            "lead": "Suresh Patil",
+            "members": [
+              {
+                "id": "ENG-FE-001",
+                "name": "Amit Verma",
+                "role": "Senior UI Developer",
+                "skills": ["Angular", "React", "TypeScript"],
+                "projects": [
+                  {
+                    "projectId": "PRJ-1001",
+                    "name": "eCommerce Portal",
+                    "status": "Ongoing",
+                    "techStack": ["Angular", "Node.js", "MongoDB"],
+                    "durationMonths": 8
+                  }
+                ],
+                "contact": {
+                  "email": "amit.verma@technova.com",
+                  "phone": "+91-9988776655"
+                }
+              }
+            ]
+          },
+          {
+            "teamName": "Backend",
+            "lead": "Meena Singh",
+            "members": []
+          }
+        ]
+      },
+      {
+        "name": "HR",
+        "head": "Vikram Kapoor",
+        "policies": {
+          "leavePolicy": {
+            "annualLeaves": 24,
+            "sickLeaves": 12,
+            "casualLeaves": 8
+          },
+          "remoteWork": {
+            "allowed": true,
+            "daysPerWeek": 2
+          }
+        }
+      }
+    ],
+    "clients": [
+      {
+        "clientId": "CLT-204",
+        "name": "FinEdge Banking",
+        "industry": "Finance",
+        "projects": [
+          {
+            "projectId": "PRJ-2003",
+            "name": "Digital Banking Suite",
+            "status": "Completed",
+            "budgetUSD": 450000
+          }
+        ]
+      }
+    ],
+    "isPublic": false
+  }
+}
+
+
+
+{{ obj. }}
+{{ obj.isPublic }}
+
+let result= jsonparser(obj)
+result=
+
+{
+
+
+}

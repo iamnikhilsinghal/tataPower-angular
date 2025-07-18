@@ -993,3 +993,12 @@ root
 
 postgres- 17.x
 pgadmin4
+
+FILE UPLOAD-
+https://stackblitz.com/edit/angular-ivy-cztgjwfi?file=src%2Fapp%2Fapp.component.html,src%2Fapp%2Fapp.component.ts
+
+DEBOUNCING-
+https://stackblitz.com/edit/angular-debounce-input-example-b15qnf7v?file=src%2Fapp%2Fapp.component.ts,src%2Fapp%2Fapp.component.html
+
+CASCADING DROP DOWN-
+https://stackblitz.com/edit/cascading-dropdown-angular?file=app%2Fapp.component.ts,app%2Fapp.component.html
