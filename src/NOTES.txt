@@ -1002,3 +1002,52 @@ https://stackblitz.com/edit/angular-debounce-input-example-b15qnf7v?file=src%2Fa
 
 CASCADING DROP DOWN-
 https://stackblitz.com/edit/cascading-dropdown-angular?file=app%2Fapp.component.ts,app%2Fapp.component.html
+
+__________________________________________
+
+Node JS-
+runtime environment
+env where we can run our programming language code
+
+html css
+static data render on browser
+
+JS-2009
+client side- browser dependent
+dynamic- interactive- user event- button click
+
+not cross platform- server
+chrome----> famous--- utilize js and render - faster compliation of JS
+V8 Engine
+
+node- use V8 Engine --- facilitates to run js on server 
+
+node js in based on top of v8 engine
+js-- angular
+
+
+v8 engine
+node- made in JS
+express- framwork based on Node JS
+runtime environment
+programming language
+library 
+module
+
+angular- framework based on JS
+framework- module+library
+
+cross-platform---- independent OS and HW
+
+Event Loop?
+2-3 minutes
+call stack
+callback queue
+5.01
+
+Pros and cons of Node js
+https://www.geeksforgeeks.org/node-js/the-pros-and-cons-of-node-js-in-web-development/
+
+Complete-
+https://www.w3schools.com/nodejs/nodejs_get_started.asp\
+
